@@ -77,6 +77,8 @@ If you use Neon, create a second database or branch for tests and put its URL in
 
 ## How it maps to the handoff
 
+User stories with acceptance criteria for the landing page, favorited stocks and the dashboard are in [docs/user-stories.md](docs/user-stories.md).
+
 | Handoff item | Where |
 |---|---|
 | Sign up / log in / log out | `src/app/(auth)/` (Server Actions), `src/app/logout/route.ts` |
