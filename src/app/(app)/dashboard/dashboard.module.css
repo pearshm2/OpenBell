@@ -1,0 +1,21 @@
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+.h1 { font-size: 34px; letter-spacing: -0.02em; }
+.grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;
+}
+.cardItem { padding: 18px 18px 0; display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+.cardTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bookmark {
+  width: 44px; height: 44px; margin: -10px -10px 0 0; flex: none;
+  display: grid; place-items: center; border: none; background: transparent; border-radius: var(--radius);
+  color: var(--accent); cursor: pointer;
+}
+.bookmark:hover { background: var(--surface-raised); }
+.cardFoot {
+  display: flex; justify-content: space-between; align-items: center;
+  margin: 6px -18px 0; padding: 12px 18px; border-top: 1px solid var(--divider);
+}
+.empty { padding: 48px 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+@media (max-width: 600px) { .h1 { font-size: 28px; } }

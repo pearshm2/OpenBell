@@ -1,0 +1,66 @@
+.split {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+.brand {
+  padding: 40px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  border-right: 1px solid var(--divider);
+  background:
+    radial-gradient(800px 400px at 0% 100%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 70%),
+    var(--bg);
+}
+.hero {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  max-width: 13ch;
+  margin: 0 0 18px;
+}
+.hero em { font-style: normal; color: var(--accent); }
+.lede { color: var(--text-muted); font-size: 17px; max-width: 42ch; margin: 0; }
+.ticker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tick {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+.tick b { font-family: var(--font-mono), monospace; font-weight: 500; font-size: 14px; color: var(--text); }
+.formSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+}
+.formCard {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.formTitle { font-size: 26px; }
+.formCard :global(.segmented) { display: grid; grid-template-columns: 1fr 1fr; }
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; }
+  .brand { border-right: none; border-bottom: 1px solid var(--divider); padding: 28px 20px; gap: 28px; }
+  .hero { font-size: 40px; }
+  .formSide { padding: 28px 16px 48px; }
+}

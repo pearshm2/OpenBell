@@ -1,0 +1,36 @@
+.shell { max-width: 960px; margin: 0 auto; padding: 24px var(--pad) 64px; }
+.top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.progress { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.bar, .barOn { height: 4px; border-radius: 4px; background: var(--surface-raised); }
+.barOn { background: var(--accent); }
+.body { padding-top: 40px; }
+.center { max-width: 620px; }
+.h1 { font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 12px; }
+.lede { color: var(--text-muted); font-size: 17px; margin: 0 0 28px; max-width: 56ch; }
+.actions { display: flex; gap: 12px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tile {
+  display: flex; flex-direction: column; gap: 6px; text-align: left;
+  min-height: 132px; padding: 16px;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius-card);
+  font: inherit; cursor: pointer;
+}
+.tile:hover { border-color: var(--border-input); background: var(--surface-raised); }
+.tileOn, .tileOn:hover { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.tileTop { display: flex; justify-content: space-between; align-items: center; }
+.check {
+  width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--border-input); color: var(--text-muted); font-size: 13px;
+}
+.tileOn .check { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.tilePrice { margin-top: auto; display: flex; flex-direction: column; gap: 2px; font-size: 15px; }
+.tileChange { font-size: 13px; }
+.footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--divider);
+}
+@media (max-width: 800px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .h1 { font-size: 30px; }
+}
